@@ -1,0 +1,74 @@
+.filter {
+  @apply mr-5 shrink-0;
+
+  .item {
+    @apply flex flex-col mb-5 last:mb-0;
+
+    .checkbox {
+
+      &Item {
+        @apply flex items-center mb-3 last:mb-0;
+      }
+
+      &Input {
+        @apply flex items-center justify-center mr-3 border border-secondary rounded-[4px] w-[18px] h-[18px] cursor-pointer;
+
+        &.checked {
+          @apply bg-primary rounded-full border-primary;
+        }
+      }
+
+      &Icon {
+        @apply text-white w-[18px] h-[18px];
+      }
+
+      &Value {
+        @apply font-medium;
+      }
+
+      &Reviews {
+        @apply flex;
+
+        &Icon {
+          @apply text-secondary mr-1 last:mr-0;
+        }
+
+        .page_starsIcon__vLKFz.nthCount1:first-child {
+          @apply text-primary
+        }
+
+        .page_starsIcon__vLKFz.nthCount2:nth-child(-n + 2) {
+          @apply text-primary
+        }
+
+        .page_starsIcon__vLKFz.nthCount3:nth-child(-n + 3) {
+          @apply text-primary
+        }
+
+        .page_starsIcon__vLKFz.nthCount4:nth-child(-n + 4) {
+          @apply text-primary
+        }
+
+        .page_starsIcon__vLKFz.nthCount5:nth-child(-n + 5) {
+          @apply text-primary
+        }
+      }
+    }
+  }
+
+  .label {
+    @apply font-bold mb-3;
+  }
+
+  .fields {
+    @apply flex items-center;
+
+    .line {
+      @apply block mx-2 font-bold text-[18px];
+    }
+  }
+
+  .input {
+    @apply bg-white border border-secondary rounded-md p-3;
+  }
+}

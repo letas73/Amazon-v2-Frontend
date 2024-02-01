@@ -1,0 +1,7 @@
+.item {
+  @apply text-light transition-colors duration-200 mb-4 last:mb-0 hover:text-primary hover:transition-colors hover:duration-200 cursor-pointer;
+
+  &.active {
+    @apply text-primary;
+  }
+}

@@ -1,0 +1,23 @@
+.item {
+  @apply w-full flex items-center justify-between bg-white p-4 rounded-lg font-medium;
+
+  .title {
+    @apply w-[200px];
+
+    &:first-letter {
+      @apply uppercase;
+    }
+  }
+
+  .btns {
+    @apply flex items-center;
+
+    &Item {
+      @apply mr-3 last:mr-0;
+    }
+
+    &Icon {
+      @apply text-primary w-[18px] h-[18px];
+    }
+  }
+}

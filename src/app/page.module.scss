@@ -1,0 +1,35 @@
+.main {
+  @apply p-5 w-full overflow-y-auto;
+  height: calc(100vh - 80.25px);
+
+  .section {
+    @apply bg-primary rounded-2xl p-6 mb-7;
+  }
+
+  .title {
+    @apply font-bold text-white text-4xl mb-3;
+    animation: fade-in 1s ease;
+  }
+
+  .descr {
+    @apply text-light leading-6 max-w-[340px] mb-5;
+    animation: fade-in 2s ease;
+  }
+
+  .link {
+    @apply inline-block bg-white text-primary font-bold py-3 px-4 rounded-3xl;
+    animation: fade-in 3s ease;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateX(-25%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

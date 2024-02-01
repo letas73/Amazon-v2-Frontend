@@ -1,0 +1,23 @@
+.item {
+  @apply flex items-center justify-between bg-white rounded-md p-5 mb-3 last:mb-0;
+
+  .left {
+    @apply flex items-center;
+  }
+
+  .img {
+    @apply mr-5;
+  }
+
+  .title {
+    @apply font-bold text-[18px] mb-2;
+  }
+
+  .brand {
+    @apply text-secondary text-[15px];
+  }
+
+  .price {
+    @apply font-bold text-[20px];
+  }
+}

@@ -1,0 +1,141 @@
+.sidebar {
+  @apply flex flex-col justify-between py-5 bg-background w-[300px] border-t border-secondary shrink-0;
+
+  .menu {
+    @apply px-6;
+
+    &Home {
+      @apply inline-block text-white font-bold text-[18px] mb-6;
+      transition: color .1s ease-in-out;
+
+      &:hover {
+        @apply text-primary;
+        transition: color .1s ease-in-out;
+      }
+    }
+
+    &Caption {
+      @apply text-white font-bold text-[18px] mb-4;
+    }
+
+    &List {
+      @apply px-2 flex flex-col;
+    }
+
+    &Item {
+      @apply mb-4 last:mb-0;
+
+      &Link {
+        @apply text-white cursor-pointer;
+        transition: color .1s ease-in-out;
+
+        &:hover {
+          @apply text-primary;
+          transition: color .1s ease-in-out;
+        }
+      }
+    }
+  }
+
+  .item {
+    @apply mb-4 last:mb-0 px-6 relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      display: block;
+      width: 3px;
+      height: 32px;
+      background-color: #ff9900;
+      border-radius: 20px;
+      opacity: 0;
+      transition: opacity .1s ease-in-out;
+    }
+
+    &.active {
+      @apply mb-6;
+
+      &::before {
+        opacity: 1;
+        transition: opacity .1s ease-in-out;
+      }
+
+      .itemContent {
+        @apply bg-darkblue;
+        transition: background-color .1s ease-in-out;
+      }
+
+      .icon {
+        @apply text-primary;
+        transition: color .1s ease-in-out;
+      }
+
+      .text {
+        @apply text-primary;
+        transition: color .1s ease-in-out;
+      }
+    }
+
+    &:hover {
+
+      .icon {
+        @apply text-primary;
+        transition: color .1s ease-in-out
+      }
+
+      .text {
+        @apply text-primary;
+        transition: color .1s ease-in-out
+      }
+    }
+
+    &Content {
+      @apply flex items-center rounded-md py-[6px] px-2 cursor-pointer;
+      transition: background-color .1s ease-in-out;
+    }
+  }
+
+  .icon {
+    @apply text-white mr-2 w-[20px] h-[20px];
+    transition: color .1s ease-in-out;
+  }
+
+  .text {
+    @apply text-white font-medium;
+    transition: color .1s ease-in-out;
+  }
+
+  .listCategories {
+    @apply pl-9 mt-3;
+  }
+
+  .logout {
+    @apply inline-flex items-center px-6 cursor-pointer;
+
+    &:hover {
+
+      .logoutIcon {
+        @apply text-primary;
+        transition: color .1s ease-in-out;
+      }
+
+      .logoutText {
+        @apply text-primary;
+        transition: color .1s ease-in-out;
+      }
+    }
+
+    &Icon {
+      @apply text-white mr-2 w-[20px] h-[20px];
+      transition: color .1s ease-in-out;
+    }
+
+    &Text {
+      @apply text-white font-medium;
+      transition: color .1s ease-in-out;
+    }
+  }
+}

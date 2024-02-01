@@ -1,0 +1,42 @@
+.rating {
+  @apply flex;
+
+  &__item {
+    @apply mr-1 last:mr-0 text-secondary;
+
+    &.nthStar1 {
+
+      &:first-child {
+        @apply text-primary;
+      }
+    }
+
+    &.nthStar2 {
+
+      &:nth-child(-n + 2) {
+        @apply text-primary;
+      }
+    }
+
+    &.nthStar3 {
+
+      &:nth-child(-n + 3) {
+        @apply text-primary;
+      }
+    }
+
+    &.nthStar4 {
+
+      &:nth-child(-n + 4) {
+        @apply text-primary;
+      }
+    }
+
+    &.nthStar5 {
+
+      &:nth-child(-n + 5) {
+        @apply text-primary;
+      }
+    }
+  }
+}

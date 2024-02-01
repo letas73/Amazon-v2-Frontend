@@ -1,0 +1,54 @@
+.search {
+  @apply flex;
+
+  .left {
+    @apply flex items-center border border-secondary border-r-0 rounded-l-lg bg-darkblue;
+  }
+
+  .input {
+    @apply text-light text-[16px] p-3 border-r border-secondary bg-transparent placeholder:text-light placeholder:text-[14px] w-[250px];
+  }
+
+  .categories {
+    @apply relative flex items-center justify-center min-w-[133px] text-light text-[14px] p-[15px] cursor-pointer;
+
+    &List {
+      @apply absolute z-20 left-0 top-[50px] right-0 flex flex-col items-center justify-center w-full bg-background rounded-lg py-2;
+    }
+
+    &Item {
+      transition: background-color .2s ease-in-out, color .2s ease-in-out;
+      @apply text-white font-medium py-2 w-full text-center text-[16px];
+
+      &:hover {
+        @apply bg-darkblue;
+        transition: background-color .2s ease-in-out;
+      }
+
+      &.active {
+        @apply bg-darkblue text-primary;
+        transition: background-color .2s ease-in-out, color .2s ease-in-out;
+      }
+    }
+  }
+
+  .wrapper {
+    @apply flex items-center;
+  }
+
+  .value {
+    @apply inline-block mr-1;
+  }
+
+  .arrow {
+    @apply w-[15px] h-[15px];
+  }
+
+  .btn {
+    @apply flex items-center justify-center bg-primary p-3 rounded-r-lg;
+
+    .icon {
+      @apply w-[20px] h-[20px] text-light;
+    }
+  }
+}

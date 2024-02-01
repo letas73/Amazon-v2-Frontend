@@ -1,0 +1,86 @@
+.admin {
+
+  .close {
+    @apply absolute z-40 top-4 right-4;
+
+    &Icon {
+      @apply text-white w-[20px] h-[20px];
+    }
+  }
+
+  .title {
+    @apply font-bold text-[22px] mt-4 mb-5 text-center uppercase;
+  }
+
+  .form {
+
+    &Field {
+      @apply flex flex-col mb-4 last:mb-0;
+    }
+
+    .label {
+      @apply font-medium mb-2;
+    }
+
+    .input {
+      @apply bg-darkblue rounded-lg placeholder:text-[14px] p-3;
+    }
+
+    .select {
+      @apply bg-darkblue rounded-lg relative outline-none;
+
+      &Value {
+        @apply inline-block;
+      }
+
+      &Btn {
+        @apply flex items-center justify-between w-full p-3;
+      }
+
+      &List {
+        @apply absolute z-10 left-0 top-[45px] w-full right-0 bg-dark rounded-lg p-3;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity .1s ease-in-out, visibility .1s ease-in-out;
+
+        &.active {
+          opacity: 1;
+          visibility: visible;
+          transition: opacity .1s ease-in-out, visibility .1s ease-in-out;
+        }
+
+        &Item {
+          @apply mb-3 last:mb-0 cursor-pointer;
+          transition: color .1s ease-in-out;
+
+          &:hover {
+            @apply text-primary;
+            transition: color .1s ease-in-out;
+          }
+        }
+      }
+    }
+
+    .textarea {
+      @apply bg-darkblue rounded-lg placeholder:text-[14px] p-3 resize-none h-[200px];
+    }
+
+    .fileBtn {
+      @apply font-bold bg-darkblue rounded-lg py-3 px-6;
+    }
+
+    .submit {
+      @apply flex items-center justify-end;
+
+      &Btn {
+        @apply bg-darkblue font-bold text-[18px] py-3 px-7 rounded-lg;
+        transition: color .2s ease-in-out;
+
+        &:hover {
+          @apply text-primary;
+          transition: color .2s ease-in-out;
+        }
+      }
+    }
+  }
+}

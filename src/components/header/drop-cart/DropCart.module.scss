@@ -1,0 +1,78 @@
+.cart {
+
+  .caption {
+    @apply text-white font-bold mb-5 text-[18px];
+  }
+
+  .list {
+    @apply mb-6;
+  }
+
+  .item {
+    @apply flex items-center mb-4 last:mb-0 pb-4 border-b border-secondary;
+
+    &Bottom {
+      @apply flex items-center justify-between;
+    }
+  }
+
+  .left {
+    @apply flex items-center shrink-0 justify-center w-[100px] h-[100px] bg-white rounded-md mr-4;
+  }
+
+  .right {
+    @apply w-full;
+  }
+
+  .title {
+    @apply inline-block font-bold text-white mb-2 max-w-[200px] hover:underline;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .price {
+    @apply font-bold text-white mb-4;
+  }
+
+  .counter {
+    @apply flex items-center;
+
+    &Btn {
+      @apply font-medium text-white text-[20px] mb-1;
+    }
+
+    &Value {
+      @apply flex items-center justify-center bg-dark text-center text-white py-1 px-2 mx-2;
+    }
+  }
+
+  .remove {
+
+    &Icon {
+      @apply text-white;
+      transition: color .2s ease-in-out;
+
+      &:hover {
+        @apply text-primary;
+        transition: color .2s ease-in-out;
+      }
+    }
+  }
+
+  .total {
+    @apply mb-5;
+
+    &Caption {
+      @apply text-white mb-2;
+    }
+
+    &Price {
+      @apply text-white font-bold text-[20px];
+    }
+  }
+
+  .link {
+    @apply inline-block mx-auto bg-white rounded-xl py-2 px-7 font-medium text-primary;
+  }
+}

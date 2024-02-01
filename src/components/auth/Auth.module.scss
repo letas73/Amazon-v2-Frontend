@@ -1,0 +1,54 @@
+.auth {
+  @apply flex flex-col items-center justify-center h-[100vh];
+
+  .link {
+    @apply font-medium text-secondary mb-5;
+  }
+
+  .wrapper {
+    @apply bg-white rounded-md px-4 py-6 w-[350px];
+  }
+
+  .title {
+    @apply font-bold text-[22px] text-center mb-5;
+  }
+
+  .form {
+    @apply mb-4;
+
+    .item {
+      @apply flex flex-col mb-4 last:mb-0;
+    }
+
+    .label {
+      @apply font-medium mb-1;
+    }
+
+    .input {
+      @apply border border-secondary rounded-xl py-2 px-3;
+      transition: all .2s linear;
+
+      &::placeholder {
+        @apply text-[14px] text-secondary;
+      }
+
+      &:focus {
+        @apply border-primary;
+        transition: all .2s linear;
+      }
+    }
+
+    .error {
+      @apply text-red-700 mt-1;
+    }
+
+    .submit {
+      @apply text-white font-bold text-[18px] py-2 px-9 bg-primary rounded-xl;
+      letter-spacing: 2px;
+    }
+  }
+
+  .btn {
+    @apply text-secondary;
+  }
+}

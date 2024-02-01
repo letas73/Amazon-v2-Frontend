@@ -1,0 +1,25 @@
+.cart {
+  @apply flex items-start justify-between w-full;
+
+  .left {
+    @apply w-full mr-20;
+  }
+
+  .title {
+    @apply font-bold text-3xl text-dark mb-5;
+  }
+
+  .list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    width: 100%;
+  }
+
+  .recom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+    row-gap: 20px;
+  }
+}

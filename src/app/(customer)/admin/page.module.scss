@@ -1,0 +1,8 @@
+.page {
+  @apply px-7 py-9 w-full;
+  height: calc(100vh - 71px);
+
+  .title {
+    @apply font-bold text-3xl mb-7;
+  }
+}

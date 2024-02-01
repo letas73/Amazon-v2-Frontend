@@ -1,0 +1,11 @@
+.profile {
+  @apply flex items-center cursor-pointer;
+
+  .imageBlock {
+    @apply rounded-full border border-primary p-1 mr-1 w-[38px] h-[38px] overflow-hidden;
+  }
+
+  .icon {
+    @apply text-light w-[20px] h-[20px];
+  }
+}

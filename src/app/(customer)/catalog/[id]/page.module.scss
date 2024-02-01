@@ -1,0 +1,166 @@
+.body {
+  @apply w-full h-full py-8 px-7 pb-[60px];
+
+  .title {
+    @apply text-3xl text-black font-bold mb-4;
+  }
+
+  .stars {
+    @apply flex mb-4;
+
+    &Icon {
+      @apply mr-1 last:mr-0 text-secondary;
+
+      &.nthStar1 {
+
+        &:first-child {
+          @apply text-primary
+        }
+      }
+
+      &.nthStar2 {
+
+        &:nth-child(-n + 2) {
+          @apply text-primary;
+        }
+      }
+
+      &.nthStar3 {
+
+        &:nth-child(-n + 3) {
+          @apply text-primary;
+        }
+      }
+
+      &.nthStar4 {
+
+        &:nth-child(-n + 4) {
+          @apply text-primary;
+        }
+      }
+
+      &.nthStar5 {
+        @apply text-primary;
+      }
+    }
+  }
+
+  .link {
+    @apply flex items-center my-4;
+
+    .reviews {
+      @apply text-dark mr-2;
+    }
+
+    .arrow {
+      @apply mt-[2px] w-[20px] h-[20px] text-dark;
+    }
+  }
+
+  .wrapper {
+    @apply flex items-start justify-between;
+
+    .left {
+      @apply flex mr-6;
+    }
+
+    .descr {
+      @apply max-w-[350px];
+
+      &Caption {
+        @apply font-bold mb-2;
+      }
+
+      &Text {
+        @apply leading-5 text-dark font-medium;
+      }
+    }
+  }
+
+  .right {
+    @apply bg-white rounded-md px-4 py-5 w-[350px];
+    box-shadow: 2px 4px 6px 0px rgba(0, 0, 0, 0.3);
+
+    .price {
+      @apply font-bold text-[25px];
+    }
+
+    .favoriteBtn {
+      @apply text-primary;
+
+      &Icon {
+        @apply w-[20px] h-[20px];
+      }
+    }
+
+    .shipping {
+      @apply font-medium mr-2;
+    }
+
+    .details {
+      @apply font-medium text-purple-900;
+    }
+
+    .date {
+      @apply font-medium text-[15px];
+    }
+
+    .cartBtn {
+      @apply bg-primary rounded-xl text-white font-medium py-2 px-7 mb-2;
+    }
+  }
+
+  .similar {
+    @apply mb-[80px];
+
+    &Title {
+      @apply font-bold text-3xl mb-4;
+    }
+
+    &List {
+      @apply flex w-full;
+    }
+  }
+
+  .reviews {
+
+    &Title {
+      @apply font-bold text-3xl mb-4;
+    }
+
+    &Link {
+      @apply inline-block font-medium text-purple-900 mb-4;
+    }
+
+    &List {
+      @apply flex flex-wrap w-full overflow-x-auto gap-6;
+    }
+  }
+
+  .modal {
+    @apply fixed z-20 left-0 top-0 right-0 bottom-0 w-full h-[100vh];
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .2s ease-in-out, visibility .2s ease-in-out;
+
+    &.active {
+      opacity: 1;
+      visibility: visible;
+      transition: opacity .2s ease-in-out, visibility .2s ease-in-out;
+    }
+
+    .modalOverlay {
+      @apply absolute left-0 top-0 right-0 bottom-0 w-full h-[100vh] bg-black;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity .2s ease-in-out, visibility .2s ease-in-out;
+
+      &.active {
+        @apply opacity-45;
+        visibility: visible;
+        transition: opacity .2s ease-in-out, visibility .2s ease-in-out;
+      }
+    }
+  }
+
+}

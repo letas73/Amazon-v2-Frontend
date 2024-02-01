@@ -1,0 +1,35 @@
+.section {
+  @apply pb-8;
+
+  .header {
+    @apply flex items-center justify-between mb-6;
+
+    &Right {
+      @apply flex items-center
+    }
+  }
+
+  .title {
+    @apply font-bold text-2xl mr-2;
+  }
+
+  .slider {
+    @apply flex;
+
+    &Btn {
+      @apply bg-white rounded-md flex items-center justify-center p-2 mr-3 last:mr-0;
+
+      &.disabled {
+        @apply opacity-60;
+      }
+    }
+
+    &Icon {
+      @apply text-black w-[15px] h-[15px];
+    }
+  }
+
+  .carousel {
+    @apply flex gap-[24px];
+  }
+}

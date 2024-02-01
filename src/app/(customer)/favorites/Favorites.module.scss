@@ -1,0 +1,14 @@
+.wrapper {
+  @apply w-full;
+
+  .title {
+    @apply font-bold text-3xl mb-5;
+  }
+
+  .list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    width: 100%;
+  }
+}

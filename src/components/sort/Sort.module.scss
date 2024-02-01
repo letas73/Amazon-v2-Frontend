@@ -1,0 +1,38 @@
+.sort {
+  @apply relative flex items-center;
+
+  &Left {
+    @apply flex items-center mr-3;
+  }
+
+  &Caption {
+    @apply font-bold mr-1;
+  }
+
+  &Value {
+    @apply font-medium;
+  }
+
+  &Icon {
+    @apply w-[22px] h-[22px] mt-[2px];
+  }
+
+  .menu {
+    @apply absolute z-20 top-9 right-0 flex flex-col;
+
+    &Item {
+      @apply bg-white rounded-md text-dark font-medium mb-3 last:mb-0 py-2 px-4 text-center cursor-pointer;
+      box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.2);
+      transition: background-color .2s ease-in-out, color .2s ease-in-out;
+
+      &:hover {
+        @apply bg-primary text-white;
+        transition: background-color .2s ease-in-out, color .2s ease-in-out;
+      }
+
+      &.active {
+        @apply underline;
+      }
+    }
+  }
+}

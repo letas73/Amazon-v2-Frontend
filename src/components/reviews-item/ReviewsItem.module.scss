@@ -1,0 +1,27 @@
+.item {
+  @apply w-[350px] min-h-[280px] p-4 bg-white rounded-md;
+
+  .top {
+    @apply flex items-center mb-4;
+  }
+
+  .avatar {
+    @apply w-[40px] h-[40px] rounded-full mr-2 overflow-hidden;
+  }
+
+  .username {
+    @apply font-medium;
+  }
+
+  .rating {
+    @apply flex mb-4;
+
+    &Icon {
+      @apply text-primary;
+    }
+  }
+
+  .text {
+    @apply leading-5;
+  }
+}

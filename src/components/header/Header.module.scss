@@ -1,0 +1,74 @@
+.header {
+  @apply flex items-center justify-between bg-background px-5 py-3;
+
+  .logoAdmin {
+    @apply font-bold text-white text-[25px];
+  }
+
+  .imageBlock {
+    @apply inline-block;
+  }
+
+  .right {
+    width: calc(100% - 288px);
+    @apply pl-3 flex items-center justify-between;
+  }
+
+  .menu {
+    @apply flex items-center;
+
+    .btns {
+      @apply flex mr-5;
+    }
+
+    &Wrapper {
+      @apply relative;
+    }
+
+    .btn {
+      @apply relative inline-block text-light p-3 mr-5 last:mr-0 rounded-lg;
+      transition: background-color .2s ease, color .2s ease;
+
+      &Icon {
+        @apply w-[20px] h-[20px];
+      }
+
+      .count {
+        @apply absolute right-[-3px] top-[-3px] z-10 flex items-center justify-center text-dark text-[13px] rounded-full bg-white min-w-[20px] min-h-[20px];
+
+        &Value {
+          @apply p-1;
+        }
+      }
+
+      &:hover {
+        @apply text-black bg-primary;
+        transition: background-color .2s ease, color .2s ease;
+      }
+    }
+
+    &Cart {
+      @apply absolute z-50 top-[62px] -right-9 bg-background p-3 rounded-xl w-[350px];
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity .2s ease-in-out, visibility .2s ease-in-out;
+
+      &.active {
+        opacity: 1;
+        visibility: visible;
+        transition: opacity .2s ease-in-out, visibility .2s ease-in-out;
+      }
+    }
+  }
+
+
+  .login {
+    @apply inline-block bg-transparent py-2 px-5 text-primary font-bold border border-primary rounded-2xl;
+    transition: background-color .2s linear, color .2s ease-in-out;
+
+    &:hover {
+      @apply bg-primary text-white;
+      transition: background-color .2s linear, color .2s ease-in-out;
+    }
+  }
+}
